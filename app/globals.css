@@ -216,8 +216,17 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
 @media (max-width: 639px) { .sunband-btn { width: 100%; justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .sunband-far, .sunband-btn svg { transition: none; } }
 
-/* About: The doubt, "the rewrite". One line typed like a draft; the doubts are deleted and retyped, and the last
-   one becomes "#1 globally." in big Anton gold. The certificate and closing line fade in under it. */
+/* About: The doubt, "into the valley, over the ridge". A sticky film stage: ridgelines rise around the typed doubts
+   as the camera sinks, then drop away for a gold sunrise when "#1 globally." lands. The win, the certificate and the
+   closing line sit in the middle. Ridges, veil and glow are moved by TheDoubt in ScrollBits.tsx. */
+.doubt-stage { position: sticky; top: 0; height: 100svh; min-height: 560px; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, #0E1216 40%, #5C3A24 82%); }
+.doubt-glow, .doubt-veil, .doubt-ridges { position: absolute; inset: 0; pointer-events: none; }
+.doubt-glow { background: radial-gradient(60% 50% at 50% 72%, rgba(247, 221, 168, 0.9), rgba(217, 139, 50, 0.55) 35%, transparent 70%); }
+.doubt-veil { background: var(--color-night); opacity: 0; }
+.doubt-ridges svg { position: absolute; left: -5%; bottom: 0; width: 110%; height: 70%; will-change: transform; }
+.doubt-ridges svg:nth-child(1) { transform: translateY(60vh); } .doubt-ridges svg:nth-child(2) { transform: translateY(80vh); }
+.doubt-ridges svg:nth-child(3) { transform: translateY(100vh); } .doubt-ridges svg:nth-child(4) { transform: translateY(120vh); }
+.doubt-copy { position: relative; z-index: 1; display: flex; height: 100%; flex-direction: column; justify-content: center; }
 .doubt-line {
   min-height: 2.2em;
   max-width: 15ch;
@@ -226,28 +235,28 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-paper);
+  text-shadow: 0 2px 30px rgba(14, 18, 22, 0.6);
 }
 .doubt-line.is-win {
   min-height: 0;
+  max-width: none;
+  text-align: center;
   font-family: var(--font-display);
-  font-size: clamp(5rem, 15vw, 15rem);
+  font-size: clamp(4.6rem, 13vw, 12rem);
   line-height: 0.9;
   letter-spacing: 0;
   color: var(--color-sunrise);
 }
 .doubt-caret { display: none; width: 0.06em; height: 0.9em; margin-left: 0.04em; vertical-align: -0.08em; background: var(--color-sunrise); }
 .doubt.is-live .doubt-caret { display: inline-block; animation: doubt-blink 1s steps(1) infinite; }
+.doubt-line.is-win .doubt-caret { display: none; }
 @keyframes doubt-blink { 50% { opacity: 0; } }
-.doubt-foot { display: flex; align-items: flex-end; gap: 28px; margin-top: 36px; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.doubt-foot { display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: clamp(20px, 3.5vh, 36px); opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .doubt-foot.is-on { opacity: 1; transform: none; }
-.doubt-foot img { width: min(320px, 40vw); flex: none; border-radius: 8px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(240, 194, 122, 0.15); }
-.doubt-foot p { max-width: 30ch; color: var(--color-muted); }
-.doubt-foot em { display: block; margin-top: 10px; font-family: var(--font-fraunces), Georgia, serif; font-style: italic; font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.2; color: var(--color-gold); }
-@media (max-width: 639px) {
-  .doubt-foot { flex-direction: column; align-items: flex-start; gap: 18px; }
-  .doubt-foot img { width: 100%; max-width: 360px; }
-}
-@media (prefers-reduced-motion: reduce) { .doubt-foot { transition: none; } }
+.doubt-foot img { width: min(440px, 84vw, 52vh * 1.78); border-radius: 8px; box-shadow: 0 30px 80px rgba(14, 18, 22, 0.7), 0 0 0 1px rgba(240, 194, 122, 0.2); }
+.doubt-foot p { margin-top: 18px; color: var(--color-paper); opacity: 0.8; }
+.doubt-foot em { display: block; margin-top: 6px; font-family: var(--font-fraunces), Georgia, serif; font-style: italic; font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.2; color: var(--color-honey); text-shadow: 0 2px 20px rgba(14, 18, 22, 0.7); }
+@media (prefers-reduced-motion: reduce) { .doubt-foot { transition: none; } .doubt-stage { position: relative; } }
 
 /* About intro: portrait with her quote laid over the lower third. */
 .about-portrait {

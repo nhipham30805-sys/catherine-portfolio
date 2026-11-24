@@ -161,7 +161,7 @@ Meta description: A gifted-school nerd from a mountain city in Vietnam who learn
 Then, large: #1 globally. 350+ teams. Agentic AI Build Week 2026.
 Followed by: Turns out I just hadn't tried yet.
 
-Layout ("The rewrite", chosen by Catherine Nov 2026): one line typed like a draft. Each doubt is deleted and retyped as the next; "I'm not enough." is wiped and replaced by "#1 globally." in big gold. Then the Agentic AI Build Week certificate appears with "350+ teams. Agentic AI Build Week 2026." and the closing line. Replaces the struck-out lines and the RMIT certificate selfie.
+Layout ("The rewrite" typing, filmed as "Into the valley, over the ridge", chosen by Catherine Nov 2026): one line typed like a draft; each doubt is deleted and retyped as the next. Through the doubts the background darkens and the camera sinks into a valley as ridgelines rise around the words. "I'm not enough." is wiped and replaced by "#1 globally." in big gold, the camera cranes up over the ridge into a gold sunrise, and the Agentic AI Build Week certificate appears in the middle with "350+ teams. Agentic AI Build Week 2026." and the closing line. Replaces the struck-out lines and the RMIT certificate selfie.
 
 ### What the mountains gave me
 
